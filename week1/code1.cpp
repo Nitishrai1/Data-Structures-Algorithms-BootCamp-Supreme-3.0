@@ -1,25 +1,41 @@
 // Wap  a program to convert a decimal number to binery representation
-
-
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 int binerytodecimal(int number){
-    
-    while(number>0){
-        int bit=number%2;
-        cout<<bit<<endl;
-        number/=10;
+    int binerynumber=0;
+    int i=0;
+
+    // by division method
+    // while(number>0){
+    //     int bit=number%2;
+    //     binerynumber+=bit*pow(10,i++);
+    //     number/=2;
+
+    // }
+
+    // doing with the and operator
+    while (number>0)
+    {
+        int bit=number&1;
+        binerynumber+=bit*pow(10,i++);
+        /* code */
+        number/=2;
     }
-    return 0;
+    
+    return binerynumber;
+    
+    
     
 }
 
 
 int main(){
     int number;
-    cout<<"Enter the number";
+    cout<<"Enter the number: ";
     cin>>number;
     int res=binerytodecimal(number);
+    cout<<res<<endl;
     
 }
