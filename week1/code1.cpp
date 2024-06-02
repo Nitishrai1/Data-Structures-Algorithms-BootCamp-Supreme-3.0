@@ -3,7 +3,7 @@
 #include<cmath>
 using namespace std;
 
-int binerytodecimal(int number){
+int decimaltobinery(int number){
     int binerynumber=0;
     int i=0;
 
@@ -21,7 +21,7 @@ int binerytodecimal(int number){
         int bit=number&1;
         binerynumber+=bit*pow(10,i++);
         /* code */
-        number/=2;
+        number=number>>1;
     }
     
     return binerynumber;
@@ -35,7 +35,7 @@ int main(){
     int number;
     cout<<"Enter the number: ";
     cin>>number;
-    int res=binerytodecimal(number);
+    int res=decimaltobinery(number);
     cout<<res<<endl;
     
 }
