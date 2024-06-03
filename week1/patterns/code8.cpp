@@ -15,17 +15,19 @@ int main() {
     int i,j;
     for ( i = 0; i < n; i++)
     {
-        cnt-=1;
+        
         for( j=0;j<n;j++){
-            if(j<cnt){
-                if((i+j)==n-1){
-                    cout<<"* ";
-                }
-                
+            if((i==0||j==0)){
+                cout<<"* ";
             }
             else{
+                if(i+j==n-1){
+                    cout<<"* ";
+                }
+                else{
+                    cout<<"  ";
+                }
 
-                cout<<"  "; 
             }
         }
         cout<<endl;
