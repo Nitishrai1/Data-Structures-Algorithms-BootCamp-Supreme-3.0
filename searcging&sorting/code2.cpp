@@ -4,13 +4,17 @@ using namespace std;
 int main() {
     int divided;cin>>divided;
     int divisor;cin>>divisor;
-    int st=0;
-    int end=divided;
-    int ans;
+    int st=-abs(divided);
+    int end=abs(divided);
+    int ans=-1;
+    int mid;
     while(st<=end){
-        int mid=st+(end-st)/2;
+        mid=st+((end-st)>>1);
         int p=divisor*mid;
-        if(p==divided) ans= mid;
+        if(p==divided){
+            ans=mid;
+            break;
+        }
         if(p>divided){
             end=mid-1;
 
@@ -19,7 +23,8 @@ int main() {
             ans=mid;
             st=mid+1;
         }
-        cout<<ans;
+        
     }
+    cout<<"The quuoint of th numbre is "<<ans<<endl;
 return 0;
 }
