@@ -1,0 +1,6 @@
+// c++ stl stands for standard template librray it is a powerfull and extensive collection of template classess and functions in the c++ programming langausge that provide several purpose classess and functions with templ;ates that implements many popular and commonly used algorithums and data structures
+// common component in STL 
+// 1: containers: vector, list , queue, stack, set, map stc;
+// 2: algorithums: sort(), binery_search(), reverse() stc;
+// 3: iterators
+// 4: functors
