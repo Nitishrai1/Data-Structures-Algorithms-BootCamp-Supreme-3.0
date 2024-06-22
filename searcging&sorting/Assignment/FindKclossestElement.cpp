@@ -69,7 +69,9 @@
 //         sort(ans.begin(),ans.end());
 //         return ans;
 //         }
-    int bs(vector<int> arr,int target){
+#include<bits/stdc++.h>
+using namespace std;
+   int bs(vector<int> arr,int target){
         int st=0;
         int end=arr.size()-1;
         while(st<=end){
