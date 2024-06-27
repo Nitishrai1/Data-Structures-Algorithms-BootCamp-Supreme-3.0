@@ -1,6 +1,8 @@
+
+<img src="https://github.com/Nitishrai1/Data-Structures-Algorithms-BootCamp-Supreme-3.0/assets/115301219/eac5962f-f9c7-4d9b-9726-c3b413385d2c" alt="image" width="1200" height="600">
+
 <h1>📚 Data Structures and Algorithms Course by Love Babbar</h1>
 Welcome to the Data Structures and Algorithms course repository! This repository contains code, notes, and resources from the course offered by Love Babbar on Code Help.<br>
-![image](https://github.com/Nitishrai1/Data-Structures-Algorithms-BootCamp-Supreme-3.0/assets/115301219/eac5962f-f9c7-4d9b-9726-c3b413385d2c)
 
 <h1>📋 Table of Contents</h1>
 Introduction
