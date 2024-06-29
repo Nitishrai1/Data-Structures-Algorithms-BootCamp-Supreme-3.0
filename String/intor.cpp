@@ -12,7 +12,7 @@
 // cend	Return const_iterator to end (public member function)
 // crbegin	Return const_reverse_iterator to reverse beginning (public member function)
 // crend	Return const_reverse_iterator to reverse end (public member function)
-
+    // 
 // Capacity:
 // size	Return length of string (public member function)
 // length	Return length of string (public member function)
