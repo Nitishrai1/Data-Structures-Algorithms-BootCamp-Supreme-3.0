@@ -1,7 +1,7 @@
 // wap to convert a string to integer 
 #include<bits/stdc++.h>
 using namespace std;
-blic:
+
     int myAtoi(string s) {
         // int integer=atoi(s.c_str());
         // return integer;
