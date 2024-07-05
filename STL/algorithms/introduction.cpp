@@ -50,7 +50,7 @@ int main() {
     // unique :it removes the duplicate element
     auto it=unique(arr.begin(),arr.end()); //return the iterator to the lat posiiton after slecteing all uniwue eleement
     arr.erase(it,arr.end()); //removing the duplicate element from the array
-
+    //auto it= partition(arr.begin(),arr.end(),checkeven); this will return  an iterator which will point to location before which all even number and after which all odd number will be there
 
 
 
