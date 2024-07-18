@@ -12,9 +12,7 @@ class Node{
         this->prev=NULL;
     }
     ~Node(){
-        
-        delete prev;
-        delete next; 
+      
     }
 };
 void createDLL(Node* &head,int data){
@@ -177,15 +175,7 @@ void deleteinMiddle(Node* &head,int pos){
 
 }
 
-void Deletion(Node* &head,int pos){
-    if(pos==1){
-        deletehead(head);
-    }
-    if(pos==length(head)){
-        deletetail(head);
-    }
 
-}
 int main() {
     Node* head=NULL;
     int n;cin>>n;
@@ -212,18 +202,16 @@ int main() {
     cout<<"Linked list before deleting the data: ";
     
     printdoublyll(head);
-    deletehead(head);
-    // deletetail(temp);
+    // deletehead(head);
+    // // deletetail(temp);
    
+    // cout<<"Printing the list afterdelete hte : ";
+    // printdoublyll(head);
+    // Clean up allocated memory
+//    deleting in the rmiddle of the linked list
+        deleteinMiddle(head,1);
+        
     cout<<"Printing the list afterdelete hte : ";
     printdoublyll(head);
-    // Clean up allocated memory
-    Node* temp;
-    while (head != nullptr) {
-        temp = head->next;
-        delete head;
-        head = temp;
-    }
-
 return 0;
 }
