@@ -19,23 +19,23 @@ using namespace std;
 // 
 
 // WAP to check if the ll have a loop or not
-bool cycle(Node* head){
-    Ndoe* temp=head;
-    // Store it in set or unorderd map
-    unordered_map<Node*,int> mp;
-    while(temp!=NULL){
-        // if(mp[temp]>1){
-        //     return true;
-        // }
-        // mp[temp]++;
-        if(mp.find(temp)!=mp.end()){
-            return true;
-        }
-        mp[temp]++;
-    }
-    return false;
+// bool cycle(Node* head){
+//     Ndoe* temp=head;
+//     // Store it in set or unorderd map
+//     unordered_map<Node*,int> mp;
+//     while(temp!=NULL){
+//         // if(mp[temp]>1){
+//         //     return true;
+//         // }
+//         // mp[temp]++;
+//         if(mp.find(temp)!=mp.end()){
+//             return true;
+//         }
+//         mp[temp]++;
+//     }
+//     return false;
 
-}
+// }
 int main() {
 
 return 0;
