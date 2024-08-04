@@ -1,27 +1,26 @@
-// Implement circular queue using array
-
-
+// Implement a doubly ended queue using array
 #include<bits/stdc++.h>
 using namespace std;
-class Circularqueue{
-
-    private:
-    int* arr;
+class DoublyEndedQueue
+{
+private:
+    /* data */
     int size;
+    int *arr;
     int front;
     int rear;
-    public:
-    Circularqueue(int s){
+public:
+    DoublyEndedQueue(int s){
         this->size=s;
-        arr=new int[size];
         front=-1;
         rear=-1;
-
+        arr=new int[size];
     }
-    void push(int val){
-        // isme theen case honge
+
+    void push_back(int val){
+         // isme theen case honge
         // yek case jab overflow ho raha ho
-        if(front==0 && rear==size-1){
+        if(front==0 && rear==size-1 || (rear==front-1)){
             cout<<"Overflow condition"<<endl;
             return;
         }
@@ -35,14 +34,55 @@ class Circularqueue{
             rear=0;
         }
         // jab middle case ho ya noraml case ho
+        else if(rear==size-1 && front!=0){
+            rear=0;
+        }
         else{
             rear++;
         }
         arr[rear]=val;
 
     }
-    void pop(){
-        if(front==-1 && rear==-1){
+    void push_front(int val){
+        if(front==0 && rear==size-1 || (rear==front-1)){
+            cout<<"Overflow condition";
+            return;
+        }
+        else if(front==-1 && rear==-1){
+            rear=front=0;
+            
+
+        }
+        else if(front==0 && rear!=size-1){
+            front=size-1;
+        }
+        else{
+            front--;
+        }
+        arr[front]=val;
+
+    }
+    void pop_back(){
+        if(rear==-1 && front==-1){
+            cout<<"Underflow condition";
+            return;
+        }
+        if(front==rear){
+            arr[rear]=-1;
+            front=-1;
+            rear=-1;
+        }
+        else if(rear==0){
+            arr[rear]=-1;
+            rear=size-1;
+        }else{
+            arr[rear]=-1;
+            rear--;
+        }
+
+    }
+    void pop_front(){
+         if(front==-1 && rear==-1){
             // iska matlab hai ki underflow condtion hai
             cout<<"Underflow condition"<<endl;
             return;
@@ -62,9 +102,9 @@ class Circularqueue{
             arr[front]=-1;
             front++;
         }
+
     }
     int getSize(){
-        // isme bhi teen case hoga
         if(front==-1){
             // empty case
             cout<<"Empty";
@@ -99,40 +139,27 @@ class Circularqueue{
         }cout<<endl;
 
     }
-
+   
 };
-int main() {
-    Circularqueue q1(6);
-    q1.push(1);
-    q1.print();
-    q1.push(2);
-    q1.print();
-    q1.push(3);
-    q1.print();
-    q1.push(4);
-    q1.print();
-    q1.push(5);
-    q1.print();
-    q1.push(6);
-    q1.print();
-    q1.pop();
-    q1.print();
-    q1.pop();
-    q1.print();
-    q1.pop();
-    q1.print();
-    // q1.pop();
-    // q1.print();
-    // q1.pop();
-    // q1.print();
-    // q1.pop();
-    // q1.print();
-    // q1.pop();
-    // q1.print();
-    cout<<q1.getFront()<<endl;
-    cout<<q1.getRear()<<endl;
-    cout<<q1.getSize()<<endl;
 
+
+int main() {
+    DoublyEndedQueue q1(6);
+    q1.push_front(1);
+    q1.print();
+    q1.push_back(2);
+    q1.print();
+    q1.push_front(3);
+    q1.print();
+    q1.push_back(4);
+    q1.print();
+    q1.push_front(5);
+    q1.print();
+    q1.push_back(6);
+    q1.print();
+
+    q1.push_back(6);
+    q1.print();
 
 return 0;
 }
