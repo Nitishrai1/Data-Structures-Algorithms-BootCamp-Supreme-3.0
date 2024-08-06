@@ -13,7 +13,7 @@ using namespace std;
 //         }
 //         for(int i:temp){
 //             cout<<i<<" ";
-//         }
+//         }  //
 //         int n=temp.size();
 //         vector<int> ans(n,0);
 
