@@ -3,7 +3,7 @@ using namespace std;
 vector<long long> printFirstNegativeInteger(long long int A[],
                                              long long int N, long long int K) {
                                                  
-     deque<long long int> q;
+    deque<long long int> q;
     vector<long long> ans;
 
     // Process the first window of size K
@@ -23,7 +23,7 @@ vector<long long> printFirstNegativeInteger(long long int A[],
 //   remaing window process kar lete hai
     for (int i = K; i < N; i++) {
        
-        if (!q.empty() && q.front() < i- K+1) {
+        if (!q.empty() &&  q.front() < i-K+1) {
             q.pop_front();
         }
 
