@@ -1,3 +1,4 @@
+// minimum addtion to make a string valid
 #include<bits/stdc++.h>
 using namespace std;
  int minAddToMakeValid(string s) {
