@@ -30,7 +30,7 @@ Node* createTree(){
 
     }
 }
-int height(TreeNode* root){
+int height(Node* root){
         if(root==NULL){
             return 0;
         }
@@ -38,7 +38,7 @@ int height(TreeNode* root){
         int right=height(root->right);
         return max(left,right)+1;
     }
-    int diameterOfBinaryTree(TreeNode* root) {
+    int diameterOfBinaryTree(Node* root) {
 
         if(root==NULL){
             return 0;
