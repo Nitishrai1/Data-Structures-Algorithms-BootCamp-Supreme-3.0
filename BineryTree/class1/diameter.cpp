@@ -51,6 +51,7 @@ int height(Node* root){
         
     }
 int main() {
+    // code to find the diameter of the binery tree
 
 return 0;
 }
