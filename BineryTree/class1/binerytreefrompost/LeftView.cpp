@@ -33,6 +33,26 @@ vector<int> leftView(Node *root)
    solve(q1,root,ans);
    return ans;
 }
+// optimal approch
+void solve(int lvl,Node* root,vector<int>& ans){
+    if(root==nullptr){
+        return;
+    }
+    if(lvl==ans.size()){
+        ans.push_back(root->data);
+    }
+    lvl+=1;
+    solve(lvl,root->left,ans);
+    solve(lvl,root->right,ans);
+    
+}
+vector<int> leftView(Node *root)
+{
+  int lvl=0;
+  vector<int> ans;
+  solve(lvl,root,ans);
+  return ans;
+}
 int main() {
 
 return 0;
