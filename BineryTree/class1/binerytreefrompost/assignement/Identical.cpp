@@ -54,6 +54,7 @@ using namespace std;
         if(!left || !right )return false;
         if(left->val!=right->val)return false;
         return check(left->left,right->right) && check(left->right,right->left);
+        return true;
     }
     bool isSymmetric(TreeNode* root) {
         if(root==nullptr)return true;
