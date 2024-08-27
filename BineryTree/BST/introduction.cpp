@@ -50,6 +50,40 @@ void postorder(Node* root){
     
 
 }
+void levelordertraversal(Node* root){
+    queue<Node*> q1;
+    q1.push(root);
+    q1.push(NULL);
+    while(!q1.empty()){
+        // int n=q1.size();
+        // for(int i=0;i<n;i++){
+        //     Node* front=q1.front();q1.pop();
+        //     cout<<front->data<<" ";
+        //     if(front->left){
+        //         q1.push(front->left);
+        //     }
+        //     if(front->right){
+        //         q1.push(front->right);
+        //     }
+        // }
+        Node* front=q1.front();
+        q1.pop();
+        if(front==NULL){
+            cout<<endl; //yek level khatam ho gya hai
+            if(!q1.empty()){
+                q1.push(NULL);
+            }
+        }else{
+            cout<<front->data<<" ";
+            if(front->left){
+                q1.push(front->left);
+            }
+            if(front->right){
+                q1.push(front->right);
+            }
+        }
+    }
+}
 bool find(Node* root,int data){
     if(root==NULL)return false;
     if(root->data==data)return true;
@@ -59,6 +93,10 @@ bool find(Node* root,int data){
         return find(root->right,data);
     }
 
+}
+// function to delete in the bst
+void deletionintobst(Node* root,int target){
+    if(root==nullptr)return;
 }
 int main() {
 
@@ -71,7 +109,15 @@ int main() {
         }
         root=createBST(root,data);
     }
-    inorder(root);
+    cout<<"Inorder ";inorder(root);cout<<endl;
+    cout<<"PreOrder ";preorder(root);cout<<endl;
+    cout<<"PostOrder ";postorder(root);cout<<endl;
+    cout<<"LevelorderTraversal ";levelordertraversal(root);
+    if(find(root,0)){
+        cout<<"Found";
+    }else{
+        cout<<"Not found";
+    }
 
 
 return 0;
