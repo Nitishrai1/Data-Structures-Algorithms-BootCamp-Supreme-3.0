@@ -38,7 +38,7 @@ void heapsort(vector<int>& arr, int n) {
         heapify(arr,n, i);
     }
 
-    
+    // sorting the array 
     for (int t = n - 1; t >= 0; t--) {
         swap(arr[0], arr[t]);
         heapify(arr,t, 0);
