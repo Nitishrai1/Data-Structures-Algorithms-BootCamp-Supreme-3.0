@@ -56,6 +56,26 @@ bool searching(TrieNode* root,string& word,int index=0){
 }
 
 
+void remove(TrieNode* root,string& word,int index=0){
+    // base case
+    if(index==word.length()){
+        root->isterminal=false;
+        return;
+    }
+
+    char ch=word[index];
+    TrieNode* child;
+    if(root->children.find(ch)!=root->children.end()){
+        child=root->children[ch];
+    }else{
+        // iska matlab hai ki present nahi hai
+        return;
+    }
+    remove(child,word,index+1);
+}
+
+
+
 
 int main() {
 
@@ -70,7 +90,10 @@ int main() {
 
     // searching
     string st="cover";
+    // bool found=searching(root,st);
+    remove(root,st);
     bool found=searching(root,st);
+
     if(found){
         cout<<"Word found";
     }else{
