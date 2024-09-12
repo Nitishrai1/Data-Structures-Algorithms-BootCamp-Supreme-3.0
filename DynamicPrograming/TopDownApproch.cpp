@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-int solvetoptodown(int n,vector<int>& dp){
+int solvetoptodown(int n,vector<int>& dp){ 
+
+    // isme check karna hot ahia konsa variabel funciton cll me cahnge ho raha us hisab se pata karte hai 1d dp 2d dp ya 3d dp cdcd
         if(n==0){
             return 0;
         }
