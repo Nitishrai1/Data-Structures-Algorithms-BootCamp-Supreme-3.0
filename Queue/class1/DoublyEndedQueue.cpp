@@ -18,7 +18,7 @@ public:
     }
 
     void push_back(int val){
-         // isme theen case honge
+         // isme teen case honge
         // yek case jab overflow ho raha ho
         if(front==0 && rear==size-1 || (rear==front-1)){
             cout<<"Overflow condition"<<endl;
@@ -34,9 +34,6 @@ public:
             rear=0;
         }
         // jab middle case ho ya noraml case ho
-        else if(rear==size-1 && front!=0){
-            rear=0;
-        }
         else{
             rear++;
         }
