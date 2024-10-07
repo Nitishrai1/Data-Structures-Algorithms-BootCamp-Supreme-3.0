@@ -35,6 +35,25 @@ class Graph{
 
     }
     
+    void dfs_helper(int node,unordered_map<int,bool> & visited){
+        visited[node]=true;
+        cout<<node<<", ";
+        for(auto nbr:adjweighted[node]){
+            if(!visited[nbr.first]){
+                dfs_helper(nbr.first,visited);
+            }
+        }
+    }
+    void DFS(int n){
+        int src=0;
+        unordered_map<int,bool> visited;
+        // dfs_helper(src,visited);  //for loop laga lete hai taki jo non conceted node hai wo bhi a jaye
+        for( int src=0;src<n;src++){
+           if(!visited[src]){
+             dfs_helper(src,visited);
+           }
+        }
+    }
 
 };
 int main() {
@@ -62,7 +81,20 @@ int main() {
 
 
     // Creating a DFS traversal
-    
+       Graph g3;
+    g3.addAdjweighted(0,3,5,1);
+    g3.addAdjweighted(0,5,1,1);
+    g3.addAdjweighted(0,2,3,1);
+    g3.addAdjweighted(3,5,6,1);
+    g3.addAdjweighted(2,5,5,1);
+    g3.addAdjweighted(5,4,10,1);
+    g3.addAdjweighted(5,6,10,1);
+    g3.addAdjweighted(4,1,10,1);
+    g3.addAdjweighted(6,1,10,1);
+    g3.DFS(6);
+
+
+
 
 
 
