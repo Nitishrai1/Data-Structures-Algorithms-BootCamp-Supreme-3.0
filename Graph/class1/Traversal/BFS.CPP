@@ -46,6 +46,30 @@ class Graph{
         }
     }
 
+
+    void BFSTraversal(int src){
+        unordered_map<int,bool> visited;
+        queue<int> q;
+        q.push(src);
+        visited[src]=true;
+
+        while(!q.empty()){
+            // front element nikal lete ahia
+            int front=q.front();q.pop();
+            cout<<front<<", ";
+            // front element par traversa karte hai jo visited nahi hai usko queu me puch karte hai or ja BFS ham log directed wale par kar rahe hai to weight ko ignore mar denge
+            for(auto neighbour:adjweighted[front]){
+                int node=neighbour.first;
+                int weight=neighbour.second;
+             
+                if(visited[node]==false){
+                    q.push(node);
+                    visited[node]=true;
+                }
+            }
+            // cout<<endl;
+        }
+    }
 };
 int main() {
 
@@ -68,7 +92,24 @@ int main() {
 
     // now lets print the graph
 
-    g2.printweightedgraph();
+    // g2.printweightedgraph();
+
+    // Now lets perform BFS
+    Graph g3;
+    g3.addAdjweighted(0,3,5,1);
+    g3.addAdjweighted(0,5,1,1);
+    g3.addAdjweighted(0,2,3,1);
+    g3.addAdjweighted(3,5,6,1);
+    g3.addAdjweighted(2,5,5,1);
+    g3.addAdjweighted(5,4,10,1);
+    g3.addAdjweighted(5,6,10,1);
+    g3.addAdjweighted(4,1,10,1);
+    g3.addAdjweighted(6,1,10,1);
+    g3.BFSTraversal(0);
+
+
+
+
 
 
 

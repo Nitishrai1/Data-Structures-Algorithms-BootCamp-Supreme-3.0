@@ -34,17 +34,7 @@ class Graph{
         }
 
     }
-    void printweightedgraph(){
-        for(auto node:adjweighted){
-            cout<<node.first<<"->";
-            cout<<"{";
-            for(auto val:node.second){
-                cout<<" conected to "<<val.first<<" with waight "<<val.second;
-            }
-            cout<<"}";
-            cout<<endl;
-        }
-    }
+    
 
 };
 int main() {
@@ -68,7 +58,11 @@ int main() {
 
     // now lets print the graph
 
-    g2.printweightedgraph();
+    // g2.printweightedgraph();
+
+
+    // Creating a DFS traversal
+    
 
 
 
