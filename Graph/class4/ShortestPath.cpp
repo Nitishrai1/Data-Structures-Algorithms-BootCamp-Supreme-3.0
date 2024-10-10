@@ -47,13 +47,6 @@ class Graph{
             }
         }
         // ab mera parent wala map populate ho gya hai bas traverse karna hai
-        // for(int i=dist;i>s;i++){
-        //     int point=i;
-        //     int par=parent[i];
-        //     path.push_back(make_pair(i,par));
-        // }
-        // reverse(path.begin(),path.end());
-        // or we can do that insert direct the node path
         vector<int> path2;
         int node=dist;
         while(node!=-1){
