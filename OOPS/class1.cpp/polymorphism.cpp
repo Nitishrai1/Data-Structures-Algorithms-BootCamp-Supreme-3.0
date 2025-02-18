@@ -4,7 +4,7 @@
 // 1 function overloading: multile funciton with same name but have different argument type and argument count
 // 2 operator overloading
 
-// run time: when the polymorphism act on the runtine taht is known as runtime polymorphism or dynamic polymorphosm
+// run time: when the polymorphism act on the runtine taht is known as runtime polymorphism or dynamic polymorphosm isme vertual keyword use karte hai or final keyword use is liye karte hai taki us calss ya us vertual funciton ko koi change na kar sake or agar function hai to usko change na kar sake
 // funciton overriding
 #include<bits/stdc++.h>
 using namespace std;
