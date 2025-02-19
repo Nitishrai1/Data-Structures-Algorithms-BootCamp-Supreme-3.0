@@ -34,13 +34,13 @@ class  Sparow : public  Bird{
 class  Eagle : public  Bird{
     public:
     void eat(){
-        cout<<"Sparrow is eating"<<endl;
+        cout<<"Eagle is eating"<<endl;
     }
     void fly(){
-        cout<<"Sparrow is flying"<<endl;
+        cout<<"Eagle is flying"<<endl;
     }
     void sleep(){
-        cout<<"Sparrow is sleaping"<<endl;
+        cout<<"Eagle is sleaping"<<endl;
     }
 
 };
