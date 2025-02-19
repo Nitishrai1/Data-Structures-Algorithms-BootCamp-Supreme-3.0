@@ -1,0 +1,1 @@
+// all the things under oops come inside the abstarction it is the global thing which tells to give the access to the user which they want to see not how the things are implemented under the hood
